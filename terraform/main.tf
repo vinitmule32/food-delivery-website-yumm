@@ -5,13 +5,13 @@ resource "aws_security_group" "web_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["103.112.40.63"]   # intentional vulnerability
+    cidr_blocks = ["103.112.40.63/32"]   # intentional vulnerability
   }
 
   ingress {
     from_port   = 5173
     to_port     = 5173
     protocol    = "tcp"
-    cidr_blocks = ["103.112.40.63"]
+    cidr_blocks = ["103.112.40.63/32"]
   }
 }
